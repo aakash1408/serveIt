@@ -9,6 +9,22 @@ This is a backend project that serves as the foundation for a social media platf
 - Input sanitization and validation.
 - Modular code structure for easy maintainability.
 
+## EndPoints
+
+- "GET /api/healthz" - Tells if the server is up and running , return code 200
+- "GET /admin/metrics" - Tells the number of requests or the number of hits 
+- "POST /admin/reset" - Reset the count of number of hits and database to intial state
+- "POST /api/users" - Used to create the user, taken in email and password
+- "PUT /api/users" - Used to update the email and password of the user
+- "POST /api/chirps" - Used to create chirp(like a tweet) 
+- "GET /api/chirps" - Used to get all the chirps of the user
+- "GET /api/chirps/{chirpID}" - Used to get a chirp by chirp id of the user
+- "POST /api/login" - Used to login the user and generates the JWT and refresh token.
+- "POST /api/refresh" - Refresh the JWT Token
+- "POST /api/revoke" - Used to revoke the refresh token
+- "DELETE /api/chirps/{chirpID}" - Delete the chirp by id 
+- "POST /api/polka/webhooks" - Used to handle the weebhook 
+
 ## Prerequisites
 
 Ensure you have the following installed:
